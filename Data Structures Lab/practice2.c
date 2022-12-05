@@ -1,34 +1,31 @@
 #include<stdio.h>
 
+
+struct student
+{
+    int roll;
+    char name[20];
+    int marks;
+
+};
+
 int main()
 {
     
-    int a[]={1,3,5,6,8,9,12,30,29};
-    int size=9;
-    int max=a[0];
-    int max2=a[0];
+    struct student s[5];
     
-    for(int i=0;i<size;i++)
+    for(int i=0;i<5;i++)
     {
-        if(a[i]>max)
-        {
-            
-            max=a[i];
-
-        }
-
-           
+        scanf("%d",&s[i].roll);
+        gets(s[i].name);
+        scanf("%d",&s[i].marks);
     }
-    for(int i=0;i<size;i++)
+
+    for(int i=0;i<5;i++)
     {
-        if(a[i] > max2 && a[i] < max)
-        max2=a[i];
+        printf("%d\n%s\n%d",s[i].roll,s[i].name,s[i].marks);
     }
     
-
-    printf("%d ",max);
-    printf("%d ",max2);
-
 
     return 0;
 }
